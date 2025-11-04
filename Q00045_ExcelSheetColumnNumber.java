@@ -45,4 +45,6 @@ class Solution {
     }
 }
 
-
+/*
+Note: 記得是26進位
+ */
