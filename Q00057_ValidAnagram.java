@@ -50,7 +50,8 @@ class Solution {
 /*
 Note:
 
-別人的寫法:可以用一個array去存，利用26字母排列的特性去計算次數
+別人的寫法:可以用一個array去存，因為規定是Lowercase。利用26字母排列的特性去計算次數
+我的寫法:比較有彈性但較慢，但可通用於lowercase及uppercase
 class Solution {
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
