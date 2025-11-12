@@ -25,9 +25,11 @@ The number of nodes in the list is the range [0, 5000].
 -5000 <= Node.val <= 5000
  */
 
- 
 
- /**
+
+/*時間複雜度:O(n) -> 每個值會跑一次，共跑n次; 空間複雜度:O(1) ->儲存常數
+*/
+  /**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -37,6 +39,7 @@ The number of nodes in the list is the range [0, 5000].
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 import java.util.*;
 class Solution {
     public ListNode reverseList(ListNode head) {
