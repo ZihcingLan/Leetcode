@@ -39,7 +39,8 @@ n == senate.length
 senate[i] is either 'R' or 'D'.
  */
 
-/* 時間複雜度:O(1) -> 每個值只會被走一次，空間複雜度:O(n) -> 兩個queue
+/* 時間複雜度:O(n) -> for loop 是O(n)、單獨看一次 poll()、add()是 O(1)、每個人會被加進 queue → 被取出」一次。
+   空間複雜度:O(2n)= O(n) -> 兩個queue
 解題思路: 用兩個queue紀錄R和D的人員排隊的位置index，倆倆比較比較大的會被禁言(poll)，比較小的會加到最後面(poll 完 index+n)
 senate = "RDDRR"
   0 1 2 3 4
