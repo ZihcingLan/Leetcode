@@ -5,7 +5,10 @@ In one step, you can move one cell up, down, left, or right. You cannot step int
 
 Return the number of steps in the shortest path from the entrance to the nearest exit, or -1 if no such path exists.
 
- 
+ /* 
+時間複雜度： O(m x n) -> 因為迷宮裡每個格子最多被訪問一次。
+空間複雜度： O(m x n) -> Queue 在最壞情況下可能需要儲存大量的節點。
+*/
 
 Example 1:
 
