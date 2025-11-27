@@ -31,11 +31,10 @@ Both list1 and list2 are sorted in non-decreasing order.
 */
 
 
-
-
-
-
-
+/*
+時間複雜度：O(M+N) -> 最差的情況list1和list2的所有節點都要跑過一遍
+空間複雜度：O(1) -> 只有使用dummy節點跟cur指標，沒有新增其他空間
+*/
 
 
 /**
