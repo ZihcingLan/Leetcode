@@ -34,4 +34,16 @@ int main(){
 }
 
 =============================
-2.
+Explain this declairation.
+void **(*d) (int &, char **(*)(char *, char **));
+--------------------------------------------------------------------
++ d is a pointer to a function that takes two parameters:
+    + a reference to an int and
+    + a pointer to a function that takes two parameters:
+        + a pointer to a char and
+        + a pointer to a pointer to a char
+    + and returns a pointer to a pointer to a char
++ and returns a pointer to a pointer to void
+
+先看d是個指標，指向一個函式，這個函式有兩個參數，最後回傳一個指標的指標（void代表還不知道回傳的指標指向的型別）
+接下來看參數，第一個參數int& 是c++才有，第二個參數是一個指標指向另外一個函式
