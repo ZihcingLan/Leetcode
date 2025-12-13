@@ -46,4 +46,36 @@ void **(*d) (int &, char **(*)(char *, char **));
 + and returns a pointer to a pointer to void
 
 先看d是個指標，指向一個函式，這個函式有兩個參數，最後回傳一個指標的指標（void代表還不知道回傳的指標指向的型別）
-接下來看參數，第一個參數int& 是c++才有，第二個參數是一個指標指向另外一個函式
+接下來看參數，第一個參數int& 是c++才有（C是int *，第二個參數是一個指標指向另外一個函式，最後回傳一個指標的指標指向char。
+
+=============================
+
+[C] 透過函式記憶體配置 — malloc()malloc in another function
+http://lee.logdown.com/posts/98518/c-through-the-function-malloc-memory-configuration
+#include <stdio.h>
+#include <stdlib.h>
+void getMemory(char** s)
+{
+    *s = (char*)malloc(sizeof(char));
+    printf("s = %p\n", s);
+    printf("*s = %p\n", *s);
+}
+int main()
+{
+    char* ch = NULL;
+    getMemory(&ch);
+    printf("&ch = %p\n", &ch);
+    printf("ch = %p\n", ch);
+    return 0;
+}
+```````````````````````````````````````
+s = 0x7fff5d2ebc00
+*s = 0x7f943bc000e0
+&ch = 0x7fff5d2ebc00
+ch = 0x7f943bc000e0
+
+=============================
+
+
+
+=============================
