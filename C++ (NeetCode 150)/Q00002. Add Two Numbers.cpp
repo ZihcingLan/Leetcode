@@ -25,7 +25,7 @@ It is guaranteed that the list represents a number that does not have leading ze
 /*
 Solution:
 Time:O(max(M,N)) -> While loop continues as long as there is node in l1, l2 or remaining carry.
-Space:O(max(M,N)) -> Create a brand-new linked list and the length is determined by the maximum length of l1 and l2 + 1 (dummy)
+Space:O(max(M,N)) -> Create a brand-new linked list and the length is determined by the maximum length of l1 and l2 + 1 (dummy or carry)
 */
 
 /**
@@ -63,3 +63,5 @@ public:
         return dummy->next;
     }
 };
+
+Complete **
