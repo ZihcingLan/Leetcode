@@ -39,23 +39,27 @@ Solution: dp, calculate sum from second.
 Time: O(n) -> Walk through
 Space: O(1) -> No additional spaces created.
 */
+#include <math.h>
+#include <algorithm>
+#include <iostream>
+#include <vector>
 
 class Solution {
 public:
-    int minCostClimbingStairs(vector<int>& cost) {
+    int minCostClimbingStairs(std::vector<int>& cost) {
         if (cost.size() == 0){
             return 0;
         }
         if (cost.size() == 1){
-            return cost[0];
-        }
-        if (cost.size() == 2){
-            return min(cost[0], cost[1]);
+            return 0;
         }
 
-        for (int i = 2; i < cost.size(); i++){
-            int cur = cost[i] + min(cost[i-2], cost[i-1]);
-        }
-        return min(cost[i-2], cost[i-1]); //the top is n+1
+        int n = cost.size();
+        for (int i = 2; i < n; i++){
+            cost[i] += std::min(cost[i-1], cost[i-2]);
+        }    
+        return std::min(cost[n-1], cost[n-2]);
     }
 };
+
+Complete:**
